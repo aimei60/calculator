@@ -21,4 +21,4 @@ function operate(a, b, operator) {
     return operator(a,b);
 }
 
-console.log(operate(5, 2, division))
+console.log(operate(4, 2, subtraction))
