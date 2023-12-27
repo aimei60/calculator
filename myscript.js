@@ -1,5 +1,4 @@
 // calculator functions
-
 const zero = document.querySelector(".zero");
 const one = document.querySelector(".one");
 const two = document.querySelector(".two");
@@ -19,66 +18,68 @@ const multiply = document.querySelector(".multiply")
 const decimal = document.querySelector(".decimal")
 const equal = document.querySelector(".equals")
 
+let firstPperand = 0;
+let secondOperand = 0;
+let currentOperator = null;
+
+function updateDisplay(value) {
+    display.textContent = value
+}
+
 decimal.addEventListener('click', function() {
-    decimalPoint = "."
-    display.append(decimalPoint)
-})
+    if (!display.textContent.includes(".")) {
+        display.append(".");
+    }
+});
 
 
 zero.addEventListener('click', function() {
-    num = 0
-    display.append(num)
+    display.append(0);
 
-}) 
+});
 
 one.addEventListener('click', function() {
-    num = 1
-    display.append(num)
-})
+    display.append(1);
+});
 
 two.addEventListener('click', function() {
-    num = 2
-    display.append(num)
-})
+    display.append(2);
+});
 
 three.addEventListener('click', function() {
-    num = 3
-    display.append(num)
-})
+    display.append(3);
+});
 
 four.addEventListener('click', function() {
-    num = 4
-    display.append(num)
-})
+    display.append(4);
+});
 
 five.addEventListener('click', function() {
-    num = 5
-    display.append(num)
-})
+    display.append(5);
+});
 
 six.addEventListener('click', function() {
-    num = 6
-    display.append(num)
-})
+    display.append(6);
+});
 
 seven.addEventListener('click', function() {
-    num = 7
-    display.append(num)
-})
+    display.append(7);
+});
 
 eight.addEventListener('click', function() {
-    num = 8
-    display.append(num)
-})
+    display.append(8);
+});
 
 nine.addEventListener('click', function() {
-    num = 9
-    display.append(num)
-})
+    display.append(9);
+});
 
 clear.addEventListener('click', function(){
-    display.textContent = " "
-})
+    display.textContent = " ";
+    firstPperand = 0;
+    secondOperand = 0;
+    currentOperator = null;
+});
 
 function addition(a,b) {
     return a + b;
@@ -110,3 +111,4 @@ equal.addEventListener('click', function(){
 
 
 console.log(operate(5, 2, subtraction))
+
