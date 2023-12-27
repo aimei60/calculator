@@ -18,7 +18,7 @@ const multiply = document.querySelector(".multiply")
 const decimal = document.querySelector(".decimal")
 const equal = document.querySelector(".equals")
 
-let firstPperand = 0;
+let firstOperand = 0;
 let secondOperand = 0;
 let currentOperator = null;
 
@@ -76,7 +76,7 @@ nine.addEventListener('click', function() {
 
 clear.addEventListener('click', function(){
     display.textContent = " ";
-    firstPperand = 0;
+    firstOperand = 0;
     secondOperand = 0;
     currentOperator = null;
 });
