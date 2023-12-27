@@ -17,6 +17,8 @@ const divide = document.querySelector(".divide")
 const multiply = document.querySelector(".multiply")
 const decimal = document.querySelector(".decimal")
 const equal = document.querySelector(".equals")
+const percentage = document.querySelector(".percentage")
+const plusMinus = document.querySelector(".plusMinus")
 
 let firstOperand = 0;
 let secondOperand = 0;
@@ -97,6 +99,13 @@ function division(a,b) {
     return a / b;
 }
 
+function percentCal(a) {
+    return a / 100;
+}
+
+function postiveOrNegative(a) {
+    return - a 
+}
 
 function operate(a, b, operator) {
     return operator(a,b);
@@ -109,20 +118,38 @@ function operationClick(opFunction) {
 }
 
 plus.addEventListener("click", function () {
-    opFunction(addition);
+    operationClick(addition);
 });
 
 minus.addEventListener("click", function () {
-    opFunction(subtraction);
+    operationClick(subtraction);
 });
 
 multiply.addEventListener("click", function () {
-    opFunction(multiplication);
+    operationClick(multiplication);
 });
 
 divide.addEventListener("click", function () {
-    opFunction(division);
+    operationClick(division);
 });
+
+percentage.addEventListener("click", function () {
+    firstOperand = parseFloat(display.textContent);
+    const result = percentCal(firstOperand);
+    updateDisplay(result);
+    firstOperand = result;
+    currentOperator = null;
+
+})
+
+plusMinus.addEventListener("click", function () {
+    firstOperand = parseFloat(display.textContent);
+    const result = postiveOrNegative(firstOperand);
+    updateDisplay(result);
+    firstOperand = result;
+    currentOperator = null;
+})
+
 
 equal.addEventListener("click", function () {
     secondOperand = parseFloat(display.textContent);
