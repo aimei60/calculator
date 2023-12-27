@@ -15,8 +15,7 @@
     color: hsl(255, 100%, 100%);
     padding: 20px;
     font-size: 20px;
-    
-
+    min-height: 20px;
 }
 
 .calculatorKeys {
