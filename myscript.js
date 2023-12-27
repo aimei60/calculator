@@ -102,13 +102,36 @@ function operate(a, b, operator) {
     return operator(a,b);
 }
 
+function operationClick(opFunction) {
+    firstOperand = parseFloat(display.textContent);
+    currentOperator = opFunction;
+    display.textContent = '';
+}
 
-equal.addEventListener('click', function(){
-
-
+plus.addEventListener("click", function () {
+    opFunction(addition);
 });
 
+minus.addEventListener("click", function () {
+    opFunction(subtraction);
+});
 
+multiply.addEventListener("click", function () {
+    opFunction(multiplication);
+});
 
-console.log(operate(5, 2, subtraction))
+divide.addEventListener("click", function () {
+    opFunction(division);
+});
 
+equal.addEventListener("click", function () {
+    secondOperand = parseFloat(display.textContent);
+    if (!isNaN(firstOperand) && !isNaN(secondOperand) && currentOperator !== null) {
+        const result = operate(firstOperand, secondOperand, currentOperator);
+        updateDisplay(result);
+        firstOperand = result;
+        secondOperand = 0;
+        currentOperator = null;
+    }
+
+});
