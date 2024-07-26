@@ -7,32 +7,30 @@
   </head>
   <body>
     <div class="calculator">
-      <div class="result-section" id="results"></div>
+      <div class="resultSection" id="results"></div>
       <div class="calculator-grid" id="grid-calculator">
-        <button class="division" id="sign-division">÷</button>
-        <button class="percentage" id="sign-percentage">%</button>
-        <button class="plusminus" id="sign-plusminus">+/-</button>
-        <button class="AC" id="sign-AC">AC</button>
-        <button class="multiplication" id="sign-multiplication">x</button>
-        <button class="seven" id="num-seven">7</button>
-        <button class="eight" id="num-eight">8</button>
-        <button class="nine" id="num-nine">9</button>
-        <button class="minus" id="sign-minus">-</button>
-        <button class="four" id="num-four">4</button>
-        <button class="five" id="num-five">5</button>
-        <button class="six" id="num-six">6</button>
-        <button class="plus" id="sign-plus">+</button>
-        <button class="one" id="num-one">1</button>
-        <button class="two" id="num-two">2</button>
-        <button class="three" id="num-three">3</button>
-        <button class="equal" id="sign-equal">=</button>
-        <button class="point" id="num-point">.</button>
-        <button class="zero" id="num-zero">0</button>
+        <button onclick="appendDisplay('/')"class="operator" id="division">÷</button>
+        <button class="percentage" id="percentage">%</button>
+        <button class="plusminus" id="plusminus">+/-</button>
+        <button class="ac" id="sign-AC">AC</button>
+        <button onclick="appendDisplay('*')" class="operator" id="multiplication">x</button>
+        <button onclick="appendDisplay('7')" class="number" id="seven">7</button>
+        <button onclick="appendDisplay('8')"class="number" id="eight">8</button>
+        <button onclick="appendDisplay('9')"class="number" id="nine">9</button>
+        <button onclick="appendDisplay('-')" class="operator" id="minus">-</button>
+        <button onclick="appendDisplay('4')"class="number" id="four">4</button>
+        <button onclick="appendDisplay('5')"class="number" id="five">5</button>
+        <button onclick="appendDisplay('6')"class="number" id="six">6</button>
+        <button onclick="appendDisplay('+')" class="operator" id="plus">+</button>
+        <button onclick="appendDisplay('1')"class="number" id="one">1</button>
+        <button onclick="appendDisplay('2')"class="number" id="two">2</button>
+        <button onclick="appendDisplay('3')"class="number" id="three">3</button>
+        <button onclick="calculate('=')"class="operator" id="equal">=</button>
+        <button class="point" id="point">.</button>
+        <button onclick="appendDisplay('0')"class="number" id="zero">0</button>
       </div>
     </div>
-
-
 </body>
 
-
+<script src="script.js"></script>
 </html> 

@@ -9,14 +9,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #d8d0d0;
+    background-color: #d9ccce;
     font-family: Arial, sans-serif;
     font-size: 20px;
 }
 
 .calculator {
     width: 300px;
-    background-color: #e19393;
+    background-color: #e3dbd6;
     border-radius: 2px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -32,11 +32,48 @@ button {
     font-size: 20px;
 }
 
-.zero {
+#zero {
     grid-column: span 2;
 }
 
-.result-section {
+.resultSection {
     padding: 18px;
 }
 
+.resultSection {
+    display: block;
+    height: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.percentage,
+.plusminus,
+.ac {
+    background-color: #ecc2ba;
+    border-color: #d9ccce;
+}
+
+#division,
+#multiplication,
+#minus,
+#plus,
+#equal {
+    background-color: #f3c4cd;
+    border-color: #d9ccce;
+}
+
+#seven,
+#eight,
+#nine,
+#four,
+#five,
+#six,
+#one,
+#two,
+#three,
+#zero,
+#point {
+    background-color: #f7e2e8;
+    border-color: #d9ccce;
+}
